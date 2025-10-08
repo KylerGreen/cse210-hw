@@ -69,7 +69,7 @@ class Menu
     {
         Console.WriteLine("What would you like to name your file?");
         string filename = Console.ReadLine();
-        filename = filename + ".txt";
+        filename = filename + ".csv";
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
             foreach (Entry entry in currentJournal._entryList)
@@ -85,7 +85,7 @@ class Menu
     {
         Console.WriteLine("What file would you like to load?");
         string filename = Console.ReadLine();
-        filename = filename + ".txt";
+        filename = filename + ".csv";
 
         if (File.Exists(filename))
         {
