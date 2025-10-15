@@ -2,8 +2,11 @@ using System;
 
 class GameLoop
 {
-    static void Main(string[] args)
+    public void Loop()
     {
-        
+
+        Deck deck = new Deck();
+
+        deck.DisplayDeck();
     }
 }

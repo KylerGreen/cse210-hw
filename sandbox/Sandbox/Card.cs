@@ -3,19 +3,32 @@ using System;
 class Card
 {
 
-    public string _name = "";
+    private string _name = "";
 
-    public string _type = "";
+    private string _type = "";
 
-    public int _cost = 0;
+    private int _cost = 0;
 
-    public string _description = ""; 
+    private string _description = "";
 
 
     public void Display()
     {
+        Console.WriteLine("");
         Console.WriteLine($"Name: {_name}");
         Console.WriteLine($"Type: {_type} | Cost: {_cost}");
         Console.WriteLine($"Description: {_description}");
     }
+
+    public Card(string name, string type, int cost, string description)
+    {
+        _name = name;
+
+        _type = type;
+
+        _cost = cost;
+
+        _description = description;
+    }
+
 }
