@@ -5,17 +5,17 @@ class Scripture
     private Reference _reference;
     private List<Word> _words = new List<Word>();
 
-    public Scripture(Reference reference, List<Word> words)
+    public Scripture(Reference reference, string words)
     {
         _reference = reference;
-        _words = words;
+        _words = words.Split(' ').Select(w => new Word(w)).ToList();
     }
 
-    public Scripture(Reference reference, List<Word> verse1, List<Word> verse2)
-    {
-        _reference = reference;
-        _words = verse1.Concat(verse2).ToList();
-    }
+    // public Scripture(Reference reference, List<Word> verse1, List<Word> verse2)
+    // {
+    //     _reference = reference;
+    //     _words = verse1.Concat(verse2).ToList();
+    // }
 
     public void Display()
     {
@@ -73,7 +73,18 @@ class Scripture
         }
         else
         {
-            HideRandomWords(3);
+            if (_words.Count - isListHiddenCount == 1)
+            {
+                HideRandomWords(1);
+            }
+            else if (_words.Count - isListHiddenCount == 2)
+            {
+                HideRandomWords(2);
+            }
+            else
+            {
+                HideRandomWords(3);
+            }
         }
     }
 
