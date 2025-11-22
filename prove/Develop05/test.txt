@@ -1,0 +1,4 @@
+580
+Simple:test|testing stuff to make sure it works|500|[X]
+Eternal:yay teat|well i meant to say test not teat oh well|30|[ ]
+Checklist:testing lots|stuff that needs to be tested to get a grade|50|[ ]|1|5|1000
